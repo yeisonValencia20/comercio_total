@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComercioTotal - tienda online</title>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/toggleNavBar.js"></script>
+    <script src="./js/carrusel.js" ></script>
+</head>
+<body>
+    <!-- Top bar inicio -->
+    <div class="container-element mt-15 mb-15">
+        <div class="row">
+            <div class="col-4 visible">
+                <a class="logo">
+                    <span class="bc-green">COMERCIO</span>
+                    <span class="bc-purple">TOTAL</span>
+                </a>
+            </div>
+            <div class="col-4 col-sm-12">
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="input-control" placeholder="Buscar producto...">
+                        <div class="icon">
+                            <span>
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4 servicio text-right visible">
+                <p>Servicio al cliente</p>
+                <h5>+57 611 1111</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Top bar fin -->
+    <!-- Nav bar inicio-->
+    <div class="container-element bg-dark mb-15">
+        <div class="row">
+            <div class="col-3 visible">
+                <a class="nav-item" href="#">
+                    <h6>
+                        <i class="fa fa-bars">
+                            Categorias
+                        </i>
+                    </h6>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <div class="dropdown">
+                    <div class="dropdown-content">
+                        <div class="dropdown-left">
+                            <a href="#">Trajes
+                                <i class="fa fa-angle-right float-right"></i>
+                            </a>
+                            <div class="dropdown-content-left">
+                                <a href="">Trajes de mujer</a>
+                                <a href="">Trajes de hombre</a>
+                                <a href="">Trajes de niño</a>
+                            </div>
+                        </div>
+                        <a href="">Camisas</a>
+                        <a href="">Jeans</a>
+                        <a href="">Ropa interior</a>
+                        <a href="">Zapatos</a>
+                        <a href="">Chaquetas</a>
+                        <a href="">Ropa deportiva</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 col-sm-12">
+                <div class="nav-bar">
+                    <div class="hidden">
+                        <a class="logo">
+                            <span class="bc-green">COMERCIO</span>
+                            <span class="bc-purple">TOTAL</span>
+                        </a>
+                    </div>
+                    <div class="hidden">
+                        <button class="navbar-toggler" onclick="toggleNavBar()">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="col-flex visible" id="navBarCollapse">
+                        <a href="" class="nav-menu">Inicio</a>
+                        <a href="" class="nav-menu">Compras</a>
+                        <a href="" class="nav-menu">Detalles Compras</a>
+                        <div class="pages">
+                            <a href="#" class="nav-menu">
+                                Páginas
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <div class="dropdown" id="pages-dropdown">
+                                <div class="dropdown-content">
+                                    <a href="">Carritos de compras</a>
+                                    <a href="">Tiendas</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="nav-menu">Contactos</a>
+                    </div>
+                    <div class="visible">
+                        <a href="" class="btn">
+                            <i class="fas fa-heart"></i>
+                            <span>0</span>
+                        </a>
+                        <a href="" class="btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav bar fin-->
+    <!-- Carusel inicio-->
+    <div class="container-element mt-15">
+        <div class="row">
+            <div class="col-8 col-sm-12">
+                <div class="carrusel">
+                    <div class="carrusel-navBtn">
+                        <span class="Btn selected" onclick="currentSlide(0)"></span>
+                        <span class="Btn" onclick="currentSlide(1)""></span>
+                        <span class="Btn" onclick="currentSlide(2)""></span>
+                    </div>
+
+                    <div class="carrusel-item active">
+                        <img src="./img/carousel-1.jpg" alt="moda ropa hombre">
+                        <div class="carrusel-description">
+                            <div>
+                                <h3>Moda de hombre</h3>
+                                <p>Colecciones para esos hombres seguros</p>
+                                <button>Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="./img/carousel-2.jpg" alt="moda ropa mujer">
+                        <div class="carrusel-description">
+                            <div>
+                                <h3>Moda de mujeres</h3>
+                                <p>Colecciones para esas mujeres empoderadas</p>
+                                <button>Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carrusel-item">
+                        <img src="./img/carousel-3.jpg" alt="moda ropa niño">
+                        <div class="carrusel-description">
+                            <div>
+                                <h3>Moda de Niños</h3>
+                                <p>Colecciones para niños felices</p>
+                                <button>Comprar ahora</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a class="arrow-carrusel" onclick="nextSlide(-1)">❮</a>
+                    <a class="arrow-carrusel right" onclick="nextSlide(1)">❯</a>
+                </div>
+            </div>
+
+            <div class="col-4 col-sm-12">
+                <div class="product-ofert">
+                    <img src="./img/offer-1.jpg" alt="ofertas especiales">
+                    <div class="product-ofert-description">
+                        <p> Ahorra 20%</p>
+                        <h4>Oferta especial</h4>
+                        <button>Comprar ahora</button>
+                    </div>
+                </div>
+                <div class="product-ofert">
+                    <img src="./img/offer-2.jpg" alt="ofertas especiales">
+                    <div class="product-ofert-description">
+                        <p> Ahorra 20%</p>
+                        <h4>Oferta especial</h4>
+                        <button>Comprar ahora</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carusel fin-->
+</body>
+</html>
