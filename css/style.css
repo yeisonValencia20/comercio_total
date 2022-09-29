@@ -19,6 +19,13 @@ body {
     margin: auto;
 }
 
+.row {
+    display: flex;
+    margin: 0 -15px;
+    padding: 0 40px;
+    align-items: center;
+}
+
 .mt-15{
     margin-top: 15px;
 }
@@ -27,11 +34,12 @@ body {
     margin-bottom: 35px;
 }
 
-.row {
-    display: flex;
-    margin: 0 -15px;
-    padding: 0 40px;
-    align-items: center;
+.pt-30 {
+    padding-top: 30px;
+}
+
+.align-none {
+    align-items: stretch;
 }
 
 .flex-wrap {
@@ -875,6 +883,74 @@ h6 {
 .card:hover .card_button {
     background: #00203fff;
     color: #adefd1ff;
+}
+
+.footer {
+    padding: 20px 0;
+}
+
+.footer-slogan h2 {
+    font-size: 1.2rem;
+    color: #adefd1ff;
+    margin: 5px 0;
+    font-weight: 500;
+}
+
+.footer-slogan p {
+    font-size: .8rem;
+    color: #adefd1ff;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.footer p {
+    font-size: .8rem;
+    color: #adefd1ff;
+    margin-top: 5px;
+}
+
+.footer p i {
+    color: gold;
+    margin-right: 5px;
+}
+
+.footer-menu {
+    padding: 20px 0;
+}
+
+.footer-menu h2 {
+    font-size: 1.2rem;
+    margin: 5px 0;
+    font-weight: 500;
+    color: #adefd1ff;
+}
+
+.footer-menu a, .footer-menu p {
+    display: block;
+    color: #adefd1ff;
+    text-decoration: none;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.footer-menu-email {
+    display: flex;
+    align-items: center;
+}
+
+.footer-menu-email input[type='text']{
+    padding: 10px;
+    outline: none;
+    flex: 1;
+    font-size: 1.1rem;
+}
+
+.footer-menu-email button {
+    padding: 10px;
+    font-size: 1.1rem;
+    background: #adefd1ff;
+    color: #00203fff;
+    outline: none;
 }
 
 @media screen and (max-width: 1250px){
