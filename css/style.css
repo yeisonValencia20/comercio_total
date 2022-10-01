@@ -936,6 +936,7 @@ h6 {
 .footer-menu-email {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .footer-menu-email input[type='text']{
@@ -943,6 +944,8 @@ h6 {
     outline: none;
     flex: 1;
     font-size: 1.1rem;
+    border: none;
+    overflow: hidden;
 }
 
 .footer-menu-email button {
@@ -951,6 +954,7 @@ h6 {
     background: #adefd1ff;
     color: #00203fff;
     outline: none;
+    border: none;
 }
 
 @media screen and (max-width: 1250px){
