@@ -24,7 +24,7 @@
 </head>
 <body>
     <!-- Top bar inicio -->
-    <div class="container-element mt-15 mb-15">
+    <div class="container-element mt-15 mb-15" id="topBar">
         <div class="row">
             <div class="col-4 visible">
                 <a class="logo">
@@ -660,7 +660,7 @@
     <!-- Categorias fin -->
     <!-- Footer inicio -->
     <div class="container-element bg-dark">
-        <div class="row align-none pt-30">
+        <div class="row align-none pt-30 flex-wrap">
             <div class="col-3 col-sm-12">
                 <div class="footer">
                     <div class="footer-slogan">
@@ -701,12 +701,41 @@
                                 <input type="text" placeholder="Email">
                                 <button>Enviar</button>
                             </div>
+                            <h3 class="follow">Siguenos</h3>
+                            <a class="social"><i class="fab fa-twitter"></i></a>
+                            <a class="social"><i class="fab fa-facebook"></i></a>
+                            <a class="social"><i class="fab fa-linkedin"></i></a>
+                            <a class="social"><i class="fab fa-instagram"></i></a>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="rights">
+                    <p>© <a href="#">Dominio</a>. todos los derechos reservados <a href="#">diseñado por Yeison Valencia</a></p>
+                    <img src="./img/payments.png" alt="">
                 </div>
             </div>
         </div>
     </div>
     <!-- Footer fin -->
+    <!-- boton fijo inicio -->
+    <a id="fixed-button" href="#topBar">
+        <i class="fa fa-angle-double-up"></i>
+    </a>
+    <!-- boton fijo fin -->
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("fixed-button").style.opacity = 1;
+            } else {
+                document.getElementById("fixed-button").style.opacity = 0;
+                console.log('probando')
+            }
+        }
+    </script>
 </body>
 </html>

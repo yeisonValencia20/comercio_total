@@ -855,8 +855,7 @@ h6 {
     display: inline-block;
     max-width: 70px;
     max-height: 70px;
-    border: 1px solid rgb(109, 110, 110);
-    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .card_products_imgs img {
@@ -955,6 +954,65 @@ h6 {
     color: #00203fff;
     outline: none;
     border: none;
+}
+
+.follow {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #adefd1ff;
+    margin: 15px 0 10px 0;
+}
+
+a.social {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 0;
+    background-color: gold;
+    color: #00203fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.rights {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #adefd1ff;
+    margin-top: 20px;
+    border-top: 1px solid white;
+}
+
+.rights a {
+    text-decoration: none;
+    color: gold;
+}
+
+#fixed-button {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 20px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
+    background: gold;
+    text-decoration: none;
+    color: #00203fff;
+    cursor: pointer;
+    opacity: 0;
+    transition: .4s ease;
+}
+
+#fixed-button:hover {
+    bottom: 35px;
 }
 
 @media screen and (max-width: 1250px){
