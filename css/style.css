@@ -252,6 +252,12 @@ h6 {
     align-items: stretch;
 }
 
+.col-flex-justify {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .nav-menu {
     text-decoration: none;
     display: block;
@@ -1013,6 +1019,92 @@ a.social {
 
 #fixed-button:hover {
     bottom: 35px;
+}
+
+.nav-route {
+    background: white;
+    display: flex;
+}
+
+.nav-route a, .nav-route span {
+    display: block;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: #00203fff;
+}
+
+.nav-route a:not(:last-child)::after {
+    content: '';
+    margin-left: 5px;
+    border-color: gray;
+    border-style: solid;
+    border-right: 2px;
+}
+
+.filtro-titulo {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #00203fff;
+    margin: 10px 0;
+}
+
+.filtro-precio {
+    background: white;
+    padding: 25px;
+}
+
+.custom-checkbox {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.custom-checkbox:last-child {
+    margin-bottom: 0px;
+}
+
+.custom-control-input {
+    position: absolute;
+    margin: 0;
+    left: 0;
+    width: 1rem;
+    height: 1rem;
+    opacity: 0;
+}
+
+.custom-control-label {
+    color: #00203fff;
+    font-weight: 500;
+    padding-left: 1.3rem;
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cantidad-filtro {
+    color: #00203fff;
+    font-size: .7rem;
+    font-weight: 500;
+    padding: 0.10rem;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    text-align: center;
+}
+
+.custom-control-label::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    border: 1px solid black;
+    transform: translateY(-50%);
+    background: no-repeat 50% / cover;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e");
+    background-color: gold;
 }
 
 @media screen and (max-width: 1250px){
