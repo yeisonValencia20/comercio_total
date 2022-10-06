@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <script src="./js/toggleNavBar.js"></script>
-    <script src="./js/carrusel.js" ></script>
+    <script src="./js/toggleDropDown.js" ></script>
 </head>
 <body>
     <!-- Top bar inicio -->
@@ -99,7 +99,7 @@
                     </div>
                     <div class="col-flex visible" id="navBarCollapse">
                         <a href="index.html" class="nav-menu">Inicio</a>
-                        <a href="shop.html" class="nav-menu">Compras</a>
+                        <a href="shop.html" class="nav-menu active">Compras</a>
                         <a href="" class="nav-menu">Detalles Compras</a>
                         <div class="pages">
                             <a href="#" class="nav-menu">
@@ -146,10 +146,11 @@
     <!-- Ruta fin-->
     <!-- Productos inicio-->
     <div class="container-element">
-        <div class="row">
-            <div class="col-3 col-sm4">
+        <div class="row align-none">
+            <div class="col-3 col-sm4 col-xsm-12">
+                <!-- Filtro precio -->
                 <h2 class="filtro-titulo">Filtrar por precio</h2>
-                <div class="filtro-precio">
+                <div class="filtro-precio mb-15">
                     <form>
                         <div class="custom-checkbox col-flex-justify">
                             <input id="precio-todos" class="custom-control-input" type="checkbox">
@@ -177,6 +178,337 @@
                             <span class="cantidad-filtro">80</span>
                         </div>
                     </form>
+                </div>
+                <!-- Filtro por color -->
+                <h2 class="filtro-titulo">Filtrar por color</h2>
+                <div class="filtro-precio mb-15">
+                    <form>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="colores-todos" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="colores-todos">Todos los colores</label>
+                            <span class="cantidad-filtro">300</span>
+                        </div>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="color-1" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="color-1">Azul</label>
+                            <span class="cantidad-filtro">105</span>
+                        </div>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="color-2" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="color-2">Rojo</label>
+                            <span class="cantidad-filtro">100</span>
+                        </div>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="color-3" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="color-3">Negro</label>
+                            <span class="cantidad-filtro">201</span>
+                        </div>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="color-4" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="color-4">blanco</label>
+                            <span class="cantidad-filtro">80</span>
+                        </div>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="color-5" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="color-5">Verde</label>
+                            <span class="cantidad-filtro">80</span>
+                        </div>
+                    </form>
+                </div>
+                <!-- Filtro por tamaño -->
+                <h2 class="filtro-titulo">Filtrar por tamaño</h2>
+                <div class="filtro-precio">
+                    <form>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="tamaño-todos" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="tamaño-todos">Todos los tamaños</label>
+                            <span class="cantidad-filtro">300</span>
+                        </div>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="tamaño-1" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="tamaño-1">XS</label>
+                            <span class="cantidad-filtro">105</span>
+                        </div>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="tamaño-2" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="tamaño-2">S</label>
+                            <span class="cantidad-filtro">100</span>
+                        </div>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="tamaño-3" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="tamaño-3">M</label>
+                            <span class="cantidad-filtro">201</span>
+                        </div>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="tamaño-4" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="tamaño-4">L</label>
+                            <span class="cantidad-filtro">80</span>
+                        </div>
+                        <div class="custom-checkbox col-flex-justify">
+                            <input id="tamaño-5" class="custom-control-input" type="checkbox">
+                            <label class="custom-control-label" for="tamaño-5">XL</label>
+                            <span class="cantidad-filtro">80</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-9 col-sm8 col-xsm-12">
+                <div class="row flex-wrap">
+                    <div class="col-12">
+                        <div class="col-flex-justify mb-10 mt-10">
+                            <div>
+                                <button class="btn btn--small"><i class="fa fa-th-large"></i></button>
+                                <button class="btn btn--small"><i class="fa fa-bars"></i></button>
+                            </div>
+                            <div>
+                                <div class="btn-group">
+                                    <button class="btn btn--small dropdown-toggle col-flex" onclick="toggleDropDown(this)">Ordenar</button>
+                                    <div class="dropdown dropdown--right" id="ordenar-dropdown">
+                                        <div class="dropdown-content">
+                                            <a href="#">Recientes</a>
+                                            <a href="#">Populares</a>
+                                            <a href="#">Mejor calificados</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn btn--small dropdown-toggle col-flex" onclick="toggleDropDown(this)">Mostrar</button>
+                                    <div class="dropdown dropdown--right" id="mostrar-dropdown">
+                                        <div class="dropdown-content">
+                                            <a href="#">10</a>
+                                            <a href="#">20</a>
+                                            <a href="#">30</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-6 col-xsm-12">
+                        <div class="cart-products">
+                            <div class="cart-products-image">
+                                <img src="./img/product-1.jpg" alt="producto camara fotografica">
+                                <div class="cart-products-overlay">
+                                    <div class="flex-overlay">
+                                        <a href="" class="overlay-button"><i class="fa fa-shopping-cart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-heart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-sync-alt"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products-description">
+                                <p>Cámara</p>
+                                <h3>$123.00</h3>
+                                <div class="calification">
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small>(99)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-6 col-xsm-12">
+                        <div class="cart-products">
+                            <div class="cart-products-image">
+                                <img src="./img/product-2.jpg" alt="producto camara fotografica">
+                                <div class="cart-products-overlay">
+                                    <div class="flex-overlay">
+                                        <a href="" class="overlay-button"><i class="fa fa-shopping-cart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-heart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-sync-alt"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products-description">
+                                <p>Buso Azul</p>
+                                <h3>$123.00</h3>
+                                <div class="calification">
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small>(99)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-6 col-xsm-12">
+                        <div class="cart-products">
+                            <div class="cart-products-image">
+                                <img src="./img/product-3.jpg" alt="producto camara fotografica">
+                                <div class="cart-products-overlay">
+                                    <div class="flex-overlay">
+                                        <a href="" class="overlay-button"><i class="fa fa-shopping-cart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-heart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-sync-alt"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products-description">
+                                <p>Lampara</p>
+                                <h3>$123.00</h3>
+                                <div class="calification">
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small>(99)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-6 col-xsm-12">
+                        <div class="cart-products">
+                            <div class="cart-products-image">
+                                <img src="./img/product-4.jpg" alt="producto camara fotografica">
+                                <div class="cart-products-overlay">
+                                    <div class="flex-overlay">
+                                        <a href="" class="overlay-button"><i class="fa fa-shopping-cart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-heart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-sync-alt"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products-description">
+                                <p>Zapatos Nike</p>
+                                <h3>$123.00</h3>
+                                <div class="calification">
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small>(99)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-6 col-xsm-12">
+                        <div class="cart-products">
+                            <div class="cart-products-image">
+                                <img src="./img/product-5.jpg" alt="producto camara fotografica">
+                                <div class="cart-products-overlay">
+                                    <div class="flex-overlay">
+                                        <a href="" class="overlay-button"><i class="fa fa-shopping-cart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-heart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-sync-alt"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products-description">
+                                <p>Drone</p>
+                                <h3>$123.00</h3>
+                                <div class="calification">
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small>(99)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-6 col-xsm-12">
+                        <div class="cart-products">
+                            <div class="cart-products-image">
+                                <img src="./img/product-6.jpg" alt="producto camara fotografica">
+                                <div class="cart-products-overlay">
+                                    <div class="flex-overlay">
+                                        <a href="" class="overlay-button"><i class="fa fa-shopping-cart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-heart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-sync-alt"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products-description">
+                                <p>Reloj</p>
+                                <h3>$123.00</h3>
+                                <div class="calification">
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small>(99)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-6 col-xsm-12">
+                        <div class="cart-products">
+                            <div class="cart-products-image">
+                                <img src="./img/product-7.jpg" alt="producto camara fotografica">
+                                <div class="cart-products-overlay">
+                                    <div class="flex-overlay">
+                                        <a href="" class="overlay-button"><i class="fa fa-shopping-cart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-heart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-sync-alt"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products-description">
+                                <p>Blusa</p>
+                                <h3>$123.00</h3>
+                                <div class="calification">
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small>(99)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-6 col-xsm-12">
+                        <div class="cart-products">
+                            <div class="cart-products-image">
+                                <img src="./img/product-8.jpg" alt="producto camara fotografica">
+                                <div class="cart-products-overlay">
+                                    <div class="flex-overlay">
+                                        <a href="" class="overlay-button"><i class="fa fa-shopping-cart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-heart"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-sync-alt"></i></a>
+                                        <a href="" class="overlay-button"><i class="fa fa-search"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-products-description">
+                                <p>Cremas Faciales</p>
+                                <h3>$123.00</h3>
+                                <div class="calification">
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small class="fa fa-star"></small>
+                                    <small>(99)</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="navigation">
+                            <a href="#" class="disabled">Atrás</a>
+                            <a href="#" class="active-nav">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#">siguiente</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

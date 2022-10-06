@@ -26,6 +26,14 @@ body {
     align-items: center;
 }
 
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
 .mt-15{
     margin-top: 15px;
 }
@@ -269,6 +277,10 @@ h6 {
     letter-spacing: 2px;
 }
 
+.active {
+    color: #adefd1ff;
+}
+
 .nav-menu:hover {
     color: #adefd1ff;
 }
@@ -279,6 +291,19 @@ h6 {
     color: #adefd1ff;
     text-decoration: none;
     font-weight: 500;
+}
+
+.btn--small {
+    padding: 0.55rem;
+    color: #00203fff;
+    background: white;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.btn--small:hover {
+    background: lightgray;
 }
 
 .btn span {
@@ -324,6 +349,7 @@ h6 {
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .18), 0 6px 10px 0 rgba(0, 0, 0, .2);
 }
 
 .col-3:hover .dropdown-content {
@@ -1104,7 +1130,73 @@ a.social {
 
 .custom-control-input:checked ~ .custom-control-label::before {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26l2.974 2.99L8 2.193z'/%3e%3c/svg%3e");
-    background-color: gold;
+    background-color: rgb(255, 215, 0);
+}
+
+.btn-group {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.dropdown--right {
+    width: auto;
+    right: 0;
+}
+
+.dropdown-toggle::after {
+    content: '';
+    display: inline-block;
+    border-top: 0.25rem solid #00203fff;
+    border-right: 0.25rem solid transparent;
+    border-left: 0.25rem solid transparent;
+    border-bottom: 0rem;
+    margin-left: 10px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.show {
+    background: lightgray;
+}
+
+.dropdown-visible {
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.navigation a {
+    padding: 12px;
+    background: white;
+    border: 1px solid lightgray;
+    color: #00203fff;
+    text-decoration: none;
+}
+
+.navigation a:hover:not(.disabled,.active-nav) {
+    background: lightgrey;
+}
+
+.navigation a.active-nav {
+    background: gold;
+    color: white;
+}
+
+.navigation a.disabled {
+    cursor: not-allowed;
+    color: lightgray;
+}
+
+.navigation a:not(:first-child) {
+    margin-left: -1px;
 }
 
 @media screen and (max-width: 1250px){
