@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComercioTotal - tienda online</title>
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/style.css">
+
+    <script src="./js/toggleNavBar.js"></script>
+    <script src="./js/carrusel.js" ></script>
+</head>
+<body>
+    <!-- Top bar inicio -->
+    <div class="container-element mt-15 mb-15" id="topBar">
+        <div class="row">
+            <div class="col-4 visible">
+                <a class="logo">
+                    <span class="bc-green">COMERCIO</span>
+                    <span class="bc-purple">TOTAL</span>
+                </a>
+            </div>
+            <div class="col-4 col-sm-12">
+                <form action="">
+                    <div class="form-group">
+                        <input type="text" class="input-control" placeholder="Buscar producto...">
+                        <div class="icon">
+                            <span>
+                                <i class="fa fa-search"></i>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-4 servicio text-right visible">
+                <p>Servicio al cliente</p>
+                <h5>+57 611 1111</h5>
+            </div>
+        </div>
+    </div>
+    <!-- Top bar fin -->
+    <!-- Nav bar inicio-->
+    <div class="container-element bg-dark mb-15">
+        <div class="row">
+            <div class="col-3 visible">
+                <a class="nav-item" href="#">
+                    <h6>
+                        <i class="fa fa-bars">
+                            Categorias
+                        </i>
+                    </h6>
+                    <i class="fa fa-angle-down"></i>
+                </a>
+                <div class="dropdown">
+                    <div class="dropdown-content">
+                        <div class="dropdown-left">
+                            <a href="#">Trajes
+                                <i class="fa fa-angle-right float-right"></i>
+                            </a>
+                            <div class="dropdown-content-left">
+                                <a href="">Trajes de mujer</a>
+                                <a href="">Trajes de hombre</a>
+                                <a href="">Trajes de niño</a>
+                            </div>
+                        </div>
+                        <a href="">Camisas</a>
+                        <a href="">Jeans</a>
+                        <a href="">Ropa interior</a>
+                        <a href="">Zapatos</a>
+                        <a href="">Chaquetas</a>
+                        <a href="">Ropa deportiva</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-9 col-sm-12">
+                <div class="nav-bar">
+                    <div class="hidden">
+                        <a class="logo">
+                            <span class="bc-green">COMERCIO</span>
+                            <span class="bc-purple">TOTAL</span>
+                        </a>
+                    </div>
+                    <div class="hidden">
+                        <button class="navbar-toggler" onclick="toggleNavBar()">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    <div class="col-flex visible" id="navBarCollapse">
+                        <a href="index.html" class="nav-menu">Inicio</a>
+                        <a href="shop.html" class="nav-menu">Compras</a>
+                        <a href="" class="nav-menu active">Detalles</a>
+                        <div class="pages">
+                            <a href="#" class="nav-menu">
+                                Páginas
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <div class="dropdown" id="pages-dropdown">
+                                <div class="dropdown-content">
+                                    <a href="">Carritos de compras</a>
+                                    <a href="">Tiendas</a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="nav-menu">Contactos</a>
+                    </div>
+                    <div class="visible">
+                        <a href="" class="btn">
+                            <i class="fas fa-heart"></i>
+                            <span>0</span>
+                        </a>
+                        <a href="" class="btn">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Nav bar fin-->
+    <!-- Ruta inicio-->
+    <div class="container-element mb-10">
+        <div class="row">
+            <div class="col-12">
+                <div class="nav-route">
+                    <a href="index.html">Inicio</a>
+                    <a href="detalles.html">Detalles</a>
+                    <span>Productos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Ruta fin-->
+    <!-- Detalle producto inicio-->
+    <div class="container-element">
+        <div class="row align-none">
+            <div class="col-4">
+                <div class="carrusel">
+                    <div class="carrusel-navBtn">
+                        <span class="Btn selected" onclick="currentSlide(0)"></span>
+                        <span class="Btn" onclick="currentSlide(1)""></span>
+                    </div>
+                    
+                    <div class="carrusel-item hight-auto active">
+                        <img class="not-cover" src="./img/product-2.jpg" alt="moda ropa hombre">
+                    </div>
+                    <div class="carrusel-item hight-auto">
+                        <img class="not-cover" src="./img/product-2-2.jpg" alt="moda ropa hombre">
+                    </div>
+                    <a class="arrow-carrusel" onclick="nextSlide(-1)">❮</a>
+                    <a class="arrow-carrusel right" onclick="nextSlide(1)">❯</a>
+                </div>
+            </div>
+            <div class="col-8 bg-light">
+                <h2>CÁMARA</h2>
+                <div class="calification">
+                    <small class="fa fa-star"></small>
+                    <small class="fa fa-star"></small>
+                    <small class="fa fa-star"></small>
+                    <small class="fa fa-star"></small>
+                    <small class="fas fa-star-half-alt"></small>
+                    <small>(99 reviews)</small>
+                </div>
+                <h3>$150.00</h3>
+                <p>
+                    La marca japonesa Canon combina calidad y rendimiento en sus productos. No importa si recién comienzas en el mundo de la fotografía o si quieres mejorar tu equipo,
+                    Canon hará que te enamores de la fotografía.
+                </p>
+                <div class="col-flex">
+                    <strong class="radio-title">talla:</strong>
+                    <form>
+                        <div class="custom-radio-button">
+                            <input type="radio" name="size" id="XS">
+                            <label for="XS">XS</label>
+                        </div>
+                        <div class="custom-radio-button">
+                            <input type="radio" name="size" id="S">
+                            <label for="S">S</label>
+                        </div>
+                        <div class="custom-radio-button">
+                            <input type="radio" name="size" id="M">
+                            <label for="M">M</label>
+                        </div>
+                        <div class="custom-radio-button">
+                            <input type="radio" name="size" id="L">
+                            <label for="L">L</label>
+                        </div>
+                        <div class="custom-radio-button">
+                            <input type="radio" name="size" id="XL">
+                            <label for="XL">XL</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-flex mt-15">
+                    <strong class="radio-title">Color:</strong>
+                    <form>
+                        <div class="custom-radio-button">
+                            <input type="radio" name="color" id="Rojo">
+                            <label for="Rojo">Rojo</label>
+                        </div>
+                        <div class="custom-radio-button">
+                            <input type="radio" name="color" id="Azul">
+                            <label for="Azul">Azul</label>
+                        </div>
+                        <div class="custom-radio-button">
+                            <input type="radio" name="color" id="Blanco">
+                            <label for="Blanco">Blanco</label>
+                        </div>
+                        <div class="custom-radio-button">
+                            <input type="radio" name="color" id="Negro">
+                            <label for="Negro">Negro</label>
+                        </div>
+                        <div class="custom-radio-button">
+                            <input type="radio" name="color" id="Verde">
+                            <label for="Verde">Verde</label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Detalle producto fin-->
+    <!-- Footer inicio -->
+    <div class="container-element bg-dark">
+        <div class="row align-none pt-30 flex-wrap">
+            <div class="col-3 col-sm-12">
+                <div class="footer">
+                    <div class="footer-slogan">
+                        <h2>ComercioTotal</h2>
+                        <p>Cualquier producto al alcance de un Click</p>
+                    </div>
+                    <p><i class="fa fa-map-marker-alt"></i>Bucaramanga, Colombia</p>
+                    <p><i class="fa fa-envelope"></i>comerciototal.example@gmail.com</p>
+                    <p><i class="fa fa-phone-alt"></i>+57 3111234567</p>
+                </div>
+            </div>
+            <div class="col-9 col-sm-12">
+                <div class="row align-none">
+                    <div class="col-4 col-xsm-12">
+                        <div class="footer-menu">
+                            <h2>Menu</h2>
+                            <a href="#"><i class="fa fa-angle-right"></i> Inicio</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> Compras</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> Detalles compras</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> Páginas</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> Contactos</a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-xsm-12">
+                        <div class="footer-menu">
+                            <h2>Mi Cuenta</h2>
+                            <a href="#"><i class="fa fa-angle-right"></i> Perfil</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> Compras</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> Ventas</a>
+                            <a href="#"><i class="fa fa-angle-right"></i> Preguntas</a>
+                        </div>
+                    </div>
+                    <div class="col-4 col-xsm-12">
+                        <div class="footer-menu">
+                            <h2>Noticias y Ofertas</h2>
+                            <p>Deja tu correo para estar al tanto de lo último en ComercioTotal</p>
+                            <div class="footer-menu-email">
+                                <input type="text" placeholder="Email">
+                                <button>Enviar</button>
+                            </div>
+                            <h3 class="follow">Siguenos</h3>
+                            <a class="social"><i class="fab fa-twitter"></i></a>
+                            <a class="social"><i class="fab fa-facebook"></i></a>
+                            <a class="social"><i class="fab fa-linkedin"></i></a>
+                            <a class="social"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="rights">
+                    <p>© <a href="#">Dominio</a>. todos los derechos reservados <a href="#">diseñado por Yeison Valencia</a></p>
+                    <img src="./img/payments.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer fin -->
+    <!-- boton fijo inicio -->
+    <a id="fixed-button" href="#topBar">
+        <i class="fa fa-angle-double-up"></i>
+    </a>
+    <!-- boton fijo fin -->
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("fixed-button").style.opacity = 1;
+            } else {
+                document.getElementById("fixed-button").style.opacity = 0;
+                console.log('probando')
+            }
+        }
+    </script>
+</body>
+</html>
