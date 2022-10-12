@@ -147,7 +147,7 @@
     <div class="container-element">
         <div class="row align-none">
             <div class="col-4">
-                <div class="carrusel">
+                <div class="carrusel mb-0">
                     <div class="carrusel-navBtn">
                         <span class="Btn selected" onclick="currentSlide(0)"></span>
                         <span class="Btn" onclick="currentSlide(1)""></span>
@@ -164,7 +164,7 @@
                 </div>
             </div>
             <div class="col-8 bg-light">
-                <h2>CÁMARA</h2>
+                <h2 class="product-name">Buzos para hombre</h2>
                 <div class="calification">
                     <small class="fa fa-star"></small>
                     <small class="fa fa-star"></small>
@@ -173,10 +173,10 @@
                     <small class="fas fa-star-half-alt"></small>
                     <small>(99 reviews)</small>
                 </div>
-                <h3>$150.00</h3>
+                <h3 class="product-price">$150.00</h3>
                 <p>
-                    La marca japonesa Canon combina calidad y rendimiento en sus productos. No importa si recién comienzas en el mundo de la fotografía o si quieres mejorar tu equipo,
-                    Canon hará que te enamores de la fotografía.
+                    Buzo cuello redondo para hombre sin estampado, colores y tallas variadas. Telas ideales para todo tipo de clima.
+                    Confección y telas nacionales.
                 </p>
                 <div class="col-flex">
                     <strong class="radio-title">talla:</strong>
@@ -227,6 +227,27 @@
                             <label for="Verde">Verde</label>
                         </div>
                     </form>
+                </div>
+                <div class="mt-15">
+                    <div class="button-group">
+                        <div class="product-amount">
+                            <button onclick="amountProduct(-1)">-</button>
+                            <span id="amount-product">1</span>
+                            <button onclick="amountProduct(1)">+</button>
+                        </div>
+                        <button class="product-add-cart"><i class="fas fa-shopping-cart"></i> Agregar al Carrito</button>
+                    </div>
+                </div>
+                <div class="mt-15">
+                    <div class="row ">
+                        <strong class="mr-2">Compartir: </strong>
+                        <div class="col-flex">
+                            <a class="social social-logo"><i class="fab fa-facebook-f"></i></a>
+                            <a class="social social-logo"><i class="fab fa-twitter"></i></a>
+                            <a class="social social-logo"><i class="fab fa-instagram"></i></a>
+                            <a class="social social-logo"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -309,6 +330,16 @@
                 console.log('probando')
             }
         }
+
+        let amount = 1;
+        function amountProduct(num){
+            amount += num;
+            if(amount < 0){
+                amount = 0;
+            }
+            document.getElementById('amount-product').innerHTML = amount
+        }
+
     </script>
 </body>
 </html>

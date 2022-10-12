@@ -30,6 +30,10 @@ body {
     margin-top: 10px;
 }
 
+.mb-0 {
+    margin-bottom: 0 !important;
+}
+
 .mb-10 {
     margin-bottom: 10px;
 }
@@ -40,6 +44,10 @@ body {
 
 .mb-15 {
     margin-bottom: 35px;
+}
+
+.mr-2 {
+    margin-right: 0.5rem;
 }
 
 .pt-30 {
@@ -480,6 +488,7 @@ h6 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    vertical-align: middle;
 }
 
 .carrusel-description {
@@ -832,7 +841,7 @@ h6 {
     color: gold;
     font-weight: 500;
     font-size: 1.2rem;
-    padding-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .card {
@@ -1015,6 +1024,10 @@ a.social {
     color: #00203fff;
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+.social.social-logo {
+    background-color: transparent;
 }
 
 .rights {
@@ -1207,6 +1220,64 @@ a.social {
     margin-left: -1px;
 }
 
+.product-name {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin: 10px 0;
+    color: #00203fff;
+}
+
+.calification :last-child {
+    color: #aaa;
+}
+
+.product-price {
+    margin-top: -5px;
+    margin-bottom: 15px;
+    font-weight: 800;
+    color: #00203fff;
+}
+
+.button-group {
+    display: flex;
+}
+
+.product-amount {
+    display: flex;
+    width: 160px;
+}
+
+.product-amount button, .product-amount span, .product-add-cart {
+    display: block;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 800;
+    border: none;
+    color: #00203fff;
+    user-select: none;
+    margin: 0;
+}
+
+.product-add-cart {
+    margin-left: 20px;
+}
+
+.product-amount span {
+    background: #eee;
+    flex: 1 1 auto;
+    width: 1%;
+}
+
+.product-amount :nth-child(odd), .product-add-cart {
+    background-color: gold;
+    cursor: pointer;
+}
+
+.product-amount :nth-child(odd):hover, .product-add-cart:hover {
+    background-color: rgb(240, 204, 0)
+}
+
 .radio-title {
     margin-right: 15px;
 }
@@ -1234,6 +1305,10 @@ a.social {
 .custom-radio-button label{
     position: relative;
     cursor: pointer;
+}
+
+.custom-radio-button label:hover::before{
+    background: #ccc;
 }
 
 .custom-radio-button label::before {
