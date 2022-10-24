@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <script src="./js/toggleNavBar.js"></script>
-    <script src="./js/carrusel.js" ></script>
+    <script src="./js/deleteElement.js"></script>
+    <script src="./js/amountProduct.js"></script>
 </head>
 <body>
     <!-- Top bar inicio -->
@@ -100,15 +101,15 @@
                     <div class="col-flex visible" id="navBarCollapse">
                         <a href="index.html" class="nav-menu">Inicio</a>
                         <a href="shop.html" class="nav-menu">Compras</a>
-                        <a href="" class="nav-menu active">Detalles</a>
+                        <a href="detalles.html" class="nav-menu">Detalles</a>
                         <div class="pages">
-                            <a href="#" class="nav-menu">
+                            <a href="#" class="nav-menu active">
                                 Páginas
                                 <i class="fa fa-angle-down"></i>
                             </a>
                             <div class="dropdown" id="pages-dropdown">
                                 <div class="dropdown-content">
-                                    <a href="shoppingCart.html">Carritos de compras</a>
+                                    <a href="">Carritos de compras</a>
                                     <a href="">Tiendas</a>
                                 </div>
                             </div>
@@ -136,123 +137,157 @@
             <div class="col-12">
                 <div class="nav-route">
                     <a href="index.html">Inicio</a>
-                    <a href="detalles.html">Detalles</a>
-                    <span>Productos</span>
+                    <a href="detalles.html">Páginas</a>
+                    <span>Carrito de compras</span>
                 </div>
             </div>
         </div>
     </div>
     <!-- Ruta fin-->
-    <!-- Detalle producto inicio-->
-    <div class="container-element">
+    <!-- Carrito de compras inicio-->
+    <div class="container-element mt-15 mb-15">
         <div class="row align-none">
-            <div class="col-4 col-sm-12">
-                <div class="carrusel mb-0">
-                    <div class="carrusel-navBtn">
-                        <span class="Btn selected" onclick="currentSlide(0)"></span>
-                        <span class="Btn" onclick="currentSlide(1)""></span>
+            <div class="col-8 col-sm-12">
+                <div class="shopping-cart">
+                    <div class="shopping-cart__row bg-dark mb-10">
+                        <h4>Producto</h4>
+                        <h4>Precio C/U</h4>
+                        <h4>Cantidad</h4>
+                        <h4>Total</h4>
+                        <h4>Remover</h4>
                     </div>
-                    
-                    <div class="carrusel-item hight-auto active">
-                        <img class="not-cover" src="./img/product-2.jpg" alt="moda ropa hombre">
+                    <div class="shopping-cart__row bg-light">
+                        <div class="shopping-cart__product">
+                            <img src="img/product-1.jpg" alt="camara profesional" class="ml-40">
+                            <strong class="lh-50 text-left">Cámara</strong>
+                        </div>
+                        <strong class="lh-50">$ 150</strong>
+                        <div class="button-group">
+                            <div class="product-amount product-amount__small">
+                                <button onclick="amountProduct(this,-1)">-</button>
+                                <span id="amount-product">1</span>
+                                <button onclick="amountProduct(this,1)">+</button>
+                            </div>
+                        </div>
+                        <strong class="lh-50">$ 150</strong>
+                        <div class="button-group">
+                            <div class="button-small">
+                                <button onclick="deleteElement(this)" title="eliminar producto">X</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="carrusel-item hight-auto">
-                        <img class="not-cover" src="./img/product-2-2.jpg" alt="moda ropa hombre">
+                    <div class="shopping-cart__row bg-light mt-15">
+                        <div class="shopping-cart__product">
+                            <img src="img/product-2.jpg" alt="buso sin estampado" class="ml-40">
+                            <strong class="lh-50 text-left">Buso</strong>
+                        </div>
+                        <strong class="lh-50">$ 150</strong>
+                        <div class="button-group">
+                            <div class="product-amount product-amount__small">
+                                <button onclick="amountProduct(this,-1)">-</button>
+                                <span id="amount-product">1</span>
+                                <button onclick="amountProduct(this,1)">+</button>
+                            </div>
+                        </div>
+                        <strong class="lh-50">$ 150</strong>
+                        <div class="button-group">
+                            <div class="button-small">
+                                <button onclick="deleteElement(this)" title="eliminar producto">X</button>
+                            </div>
+                        </div>
                     </div>
-                    <a class="arrow-carrusel" onclick="nextSlide(-1)">❮</a>
-                    <a class="arrow-carrusel right" onclick="nextSlide(1)">❯</a>
+                    <div class="shopping-cart__row bg-light mt-15">
+                        <div class="shopping-cart__product">
+                            <img src="img/product-3.jpg" alt="lampara elegante" class="ml-40">
+                            <strong class="lh-50 text-left">Lampara</strong>
+                        </div>
+                        <strong class="lh-50">$ 150</strong>
+                        <div class="button-group">
+                            <div class="product-amount product-amount__small">
+                                <button onclick="amountProduct(this,-1)">-</button>
+                                <span id="amount-product">1</span>
+                                <button onclick="amountProduct(this,1)">+</button>
+                            </div>
+                        </div>
+                        <strong class="lh-50">$ 150</strong>
+                        <div class="button-group">
+                            <div class="button-small">
+                                <button onclick="deleteElement(this)" title="eliminar producto">X</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shopping-cart__row bg-light mt-15">
+                        <div class="shopping-cart__product">
+                            <img src="img/product-4.jpg" alt="zapatillas negras" class="ml-40">
+                            <strong class="lh-50 text-left">Zapatillas</strong>
+                        </div>
+                        <strong class="lh-50">$ 150</strong>
+                        <div class="button-group">
+                            <div class="product-amount product-amount__small">
+                                <button onclick="amountProduct(this,-1)">-</button>
+                                <span id="amount-product">1</span>
+                                <button onclick="amountProduct(this,1)">+</button>
+                            </div>
+                        </div>
+                        <strong class="lh-50">$ 150</strong>
+                        <div class="button-group">
+                            <div class="button-small">
+                                <button onclick="deleteElement(this)" title="eliminar producto">X</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shopping-cart__row bg-light mt-15 mb-15">
+                        <div class="shopping-cart__product">
+                            <img src="img/product-5.jpg" alt="drone blanco con camara" class="ml-40">
+                            <strong class="lh-50 text-left">Drone</strong>
+                        </div>
+                        <strong class="lh-50">$ 150</strong>
+                        <div class="button-group">
+                            <div class="product-amount product-amount__small">
+                                <button onclick="amountProduct(this,-1)">-</button>
+                                <span id="amount-product">1</span>
+                                <button onclick="amountProduct(this,1)">+</button>
+                            </div>
+                        </div>
+                        <strong class="lh-50">$ 150</strong>
+                        <div class="button-group">
+                            <div class="button-small">
+                                <button onclick="deleteElement(this)" title="eliminar producto">X</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-8 col-sm-12 bg-light">
-                <h2 class="product-name">Buzos para hombre</h2>
-                <div class="calification">
-                    <small class="fa fa-star"></small>
-                    <small class="fa fa-star"></small>
-                    <small class="fa fa-star"></small>
-                    <small class="fa fa-star"></small>
-                    <small class="fas fa-star-half-alt"></small>
-                    <small>(99 reviews)</small>
-                </div>
-                <h3 class="product-price">$150.00</h3>
-                <p>
-                    Buzo cuello redondo para hombre sin estampado, colores y tallas variadas. Telas ideales para todo tipo de clima.
-                    Confección y telas nacionales.
-                </p>
+            <div class="col-4 col-sm-12">
                 <div class="col-flex">
-                    <strong class="radio-title">talla:</strong>
-                    <form>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="size" id="XS">
-                            <label for="XS">XS</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="size" id="S">
-                            <label for="S">S</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="size" id="M">
-                            <label for="M">M</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="size" id="L">
-                            <label for="L">L</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="size" id="XL">
-                            <label for="XL">XL</label>
-                        </div>
-                    </form>
+                    <input type="text" class="cupon" placeholder="Ingresar cupón">
+                    <button class="cupon-button">Aplicar cupón</button>
                 </div>
-                <div class="col-flex mt-15">
-                    <strong class="radio-title">Color:</strong>
-                    <form>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="color" id="Rojo">
-                            <label for="Rojo">Rojo</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="color" id="Azul">
-                            <label for="Azul">Azul</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="color" id="Blanco">
-                            <label for="Blanco">Blanco</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="color" id="Negro">
-                            <label for="Negro">Negro</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="color" id="Verde">
-                            <label for="Verde">Verde</label>
-                        </div>
-                    </form>
+                <div class="categorie-title">
+                    <h3 class="categorie-title__modified">Resumen Compra</h4>
+                    <div></div>
                 </div>
-                <div class="mt-15">
-                    <div class="button-group">
-                        <div class="product-amount">
-                            <button onclick="amountProduct(-1)">-</button>
-                            <span id="amount-product">1</span>
-                            <button onclick="amountProduct(1)">+</button>
-                        </div>
-                        <button class="product-add-cart"><i class="fas fa-shopping-cart"></i> Agregar al Carrito</button>
+                <div class="resumen-compra">
+                    <div class="col-flex-justify mb-10">
+                        <strong>Subtotal</strong>
+                        <strong>$ 150</strong>
                     </div>
-                </div>
-                <div class="mt-15">
-                    <div class="row ">
-                        <strong class="mr-2">Compartir: </strong>
-                        <div class="col-flex">
-                            <a class="social social-logo"><i class="fab fa-facebook-f"></i></a>
-                            <a class="social social-logo"><i class="fab fa-twitter"></i></a>
-                            <a class="social social-logo"><i class="fab fa-instagram"></i></a>
-                            <a class="social social-logo"><i class="fab fa-whatsapp"></i></a>
-                        </div>
+                    <div class="col-flex-justify mb-10">
+                        <strong>Envio</strong>
+                        <strong>$ 10</strong>
+                    </div>
+                    <div class="col-flex-justify resumen-compra__separador">
+                        <h3>Total</h3>
+                        <h3>$ 160</h3>
+                    </div>
+                    <div class="button-group">
+                        <button class="button-group__pagar">Pagar</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Detalle producto fin-->
+    <!-- Carrito de compras fin-->
     <!-- Footer inicio -->
     <div class="container-element bg-dark">
         <div class="row align-none pt-30 flex-wrap">
@@ -330,16 +365,6 @@
                 console.log('probando')
             }
         }
-
-        let amount = 1;
-        function amountProduct(num){
-            amount += num;
-            if(amount < 0){
-                amount = 0;
-            }
-            document.getElementById('amount-product').innerHTML = amount
-        }
-
     </script>
 </body>
 </html>
