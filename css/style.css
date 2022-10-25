@@ -290,6 +290,11 @@ h6 {
     justify-content: space-between;
 }
 
+.col-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 .nav-menu {
     text-decoration: none;
     display: block;
@@ -1450,6 +1455,32 @@ a.social {
     background: rgb(236, 201, 3);
 }
 
+.factura-direccion {
+    padding: 30px;
+}
+
+.factura-direccion__input {
+    flex: 1;
+}
+
+.factura-direccion__input:first-child {
+    margin-right: 50px;
+}
+
+.factura-direccion__input input, .factura-direccion__input label, .factura-direccion__input select {
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #00203fff;
+    user-select: none;
+}
+
+.factura-direccion__input input, .factura-direccion__input select {
+    margin-top: 5px;
+    padding: 10px;
+}
+
 @media screen and (max-width: 1250px){
     .row {
         padding: 0 0px;
@@ -1497,7 +1528,6 @@ a.social {
         display: block;
     }
 
-    
     .form-group {
         width: 70%;
         margin: auto;

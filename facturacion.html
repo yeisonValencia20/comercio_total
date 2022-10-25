@@ -20,8 +20,7 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <script src="./js/toggleNavBar.js"></script>
-    <script src="./js/deleteElement.js"></script>
-    <script src="./js/amountProduct.js"></script>
+    <script src="./js/showElement.js"></script>
 </head>
 <body>
     <!-- Top bar inicio -->
@@ -137,140 +136,114 @@
             <div class="col-12">
                 <div class="nav-route">
                     <a href="index.html">Inicio</a>
-                    <a href="shoppingCart.html">Páginas</a>
-                    <span>Carrito de compras</span>
+                    <a href="facturacion.html">Paginas</a>
+                    <span>Facturación</span>
                 </div>
             </div>
         </div>
     </div>
     <!-- Ruta fin-->
-    <!-- Carrito de compras inicio-->
-    <div class="container-element mt-15 mb-15">
-        <div class="row align-none">
+    <!-- direccion factura inicio -->
+    <div class="container-element">
+        <div class="row align-none flex-wrap">
             <div class="col-8 col-sm-12">
-                <div class="shopping-cart">
-                    <div class="shopping-cart__row bg-dark mb-10">
-                        <h4>Producto</h4>
-                        <h4>Precio C/U</h4>
-                        <h4>Cantidad</h4>
-                        <h4>Total</h4>
-                        <h4>Remover</h4>
-                    </div>
-                    <div class="shopping-cart__row bg-light">
-                        <div class="shopping-cart__product">
-                            <img src="img/product-1.jpg" alt="camara profesional" class="ml-40">
-                            <strong class="lh-50 text-left">Cámara</strong>
+                <div class="categorie-title">
+                    <h3>Dirección facturación</h3>
+                    <div></div>
+                </div>
+                <div class="factura-direccion bg-light">
+                    <div class="col-flex mb-15">
+                        <div class="factura-direccion__input">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="" id="name" placeholder="Nombre">
                         </div>
-                        <strong class="lh-50">$ 150</strong>
-                        <div class="button-group">
-                            <div class="product-amount product-amount__small">
-                                <button onclick="amountProduct(this,-1)">-</button>
-                                <span id="amount-product">1</span>
-                                <button onclick="amountProduct(this,1)">+</button>
-                            </div>
-                        </div>
-                        <strong class="lh-50">$ 150</strong>
-                        <div class="button-group">
-                            <div class="button-small">
-                                <button onclick="deleteElement(this)" title="eliminar producto">X</button>
-                            </div>
+                        <div class="factura-direccion__input">
+                            <label for="lastname">Apellido</label>
+                            <input type="text" name="" id="lastname" placeholder="Apellido">
                         </div>
                     </div>
-                    <div class="shopping-cart__row bg-light mt-15">
-                        <div class="shopping-cart__product">
-                            <img src="img/product-2.jpg" alt="buso sin estampado" class="ml-40">
-                            <strong class="lh-50 text-left">Buso</strong>
+                    <div class="col-flex mb-15">
+                        <div class="factura-direccion__input">
+                            <label for="email">E-mail</label>
+                            <input type="text" name="" id="email" placeholder="example@email.com">
                         </div>
-                        <strong class="lh-50">$ 150</strong>
-                        <div class="button-group">
-                            <div class="product-amount product-amount__small">
-                                <button onclick="amountProduct(this,-1)">-</button>
-                                <span id="amount-product">1</span>
-                                <button onclick="amountProduct(this,1)">+</button>
-                            </div>
-                        </div>
-                        <strong class="lh-50">$ 150</strong>
-                        <div class="button-group">
-                            <div class="button-small">
-                                <button onclick="deleteElement(this)" title="eliminar producto">X</button>
-                            </div>
+                        <div class="factura-direccion__input">
+                            <label for="telefono">Telefono</label>
+                            <input type="text" name="" id="telefono" placeholder="+57311.......">
                         </div>
                     </div>
-                    <div class="shopping-cart__row bg-light mt-15">
-                        <div class="shopping-cart__product">
-                            <img src="img/product-3.jpg" alt="lampara elegante" class="ml-40">
-                            <strong class="lh-50 text-left">Lampara</strong>
+                    <div class="col-flex mb-15">
+                        <div class="factura-direccion__input">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" name="" id="direccion" placeholder="Cra 12 # xxx">
                         </div>
-                        <strong class="lh-50">$ 150</strong>
-                        <div class="button-group">
-                            <div class="product-amount product-amount__small">
-                                <button onclick="amountProduct(this,-1)">-</button>
-                                <span id="amount-product">1</span>
-                                <button onclick="amountProduct(this,1)">+</button>
-                            </div>
-                        </div>
-                        <strong class="lh-50">$ 150</strong>
-                        <div class="button-group">
-                            <div class="button-small">
-                                <button onclick="deleteElement(this)" title="eliminar producto">X</button>
-                            </div>
+                        <div class="factura-direccion__input">
+                            <label for="adicional">Información adicional</label>
+                            <input type="text" name="" id="adicional" placeholder="barrio, bloque, apto ...">
                         </div>
                     </div>
-                    <div class="shopping-cart__row bg-light mt-15">
-                        <div class="shopping-cart__product">
-                            <img src="img/product-4.jpg" alt="zapatillas negras" class="ml-40">
-                            <strong class="lh-50 text-left">Zapatillas</strong>
+                    <div class="col-flex mb-15">
+                        <div class="factura-direccion__input">
+                            <label for="Pais">Pais</label>
+                            <select name="pais" id="Pais">
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="colombia">Colombia</option>
+                                <option value="francia">Francia</option>
+                                <option value="italia">Italia</option>
+                                <option value="mexico">Mexico</option>
+                                <option value="usa">United States</option>
+                            </select>
                         </div>
-                        <strong class="lh-50">$ 150</strong>
-                        <div class="button-group">
-                            <div class="product-amount product-amount__small">
-                                <button onclick="amountProduct(this,-1)">-</button>
-                                <span id="amount-product">1</span>
-                                <button onclick="amountProduct(this,1)">+</button>
-                            </div>
-                        </div>
-                        <strong class="lh-50">$ 150</strong>
-                        <div class="button-group">
-                            <div class="button-small">
-                                <button onclick="deleteElement(this)" title="eliminar producto">X</button>
-                            </div>
+                        <div class="factura-direccion__input">
+                            <label for="departamento">Departamento/Estado</label>
+                            <input type="text" name="" id="departamento" placeholder="Cundinamarca">
                         </div>
                     </div>
-                    <div class="shopping-cart__row bg-light mt-15 mb-15">
-                        <div class="shopping-cart__product">
-                            <img src="img/product-5.jpg" alt="drone blanco con camara" class="ml-40">
-                            <strong class="lh-50 text-left">Drone</strong>
+                    <div class="col-flex mb-15">
+                        <div class="factura-direccion__input">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" name="" id="ciudad" placeholder="New York">
                         </div>
-                        <strong class="lh-50">$ 150</strong>
-                        <div class="button-group">
-                            <div class="product-amount product-amount__small">
-                                <button onclick="amountProduct(this,-1)">-</button>
-                                <span id="amount-product">1</span>
-                                <button onclick="amountProduct(this,1)">+</button>
-                            </div>
+                        <div class="factura-direccion__input">
+                            <label for="codigopostal">Codigo postal</label>
+                            <input type="text" name="" id="codigopostal" placeholder="123">
                         </div>
-                        <strong class="lh-50">$ 150</strong>
-                        <div class="button-group">
-                            <div class="button-small">
-                                <button onclick="deleteElement(this)" title="eliminar producto">X</button>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="custom-checkbox col-flex-justify">
+                        <input id="crear-cuenta" class="custom-control-input" type="checkbox">
+                        <label class="custom-control-label" for="crear-cuenta">Guardar datos</label>
+                    </div>
+                    <div class="custom-checkbox col-flex-justify mt-15">
+                        <input id="shipaddres" class="custom-control-input" type="checkbox" onclick="showElement('direccion-envio')">
+                        <label class="custom-control-label" for="shipaddres">Enviar a una dirección diferente</label>
                     </div>
                 </div>
             </div>
             <div class="col-4 col-sm-12">
-                <div class="col-flex">
-                    <input type="text" class="cupon" placeholder="Ingresar cupón">
-                    <button class="cupon-button">Aplicar cupón</button>
-                </div>
                 <div class="categorie-title">
-                    <h3 class="categorie-title__modified">Resumen Compra</h4>
+                    <h3>Resumen Compra</h4>
                     <div></div>
                 </div>
                 <div class="resumen-compra">
                     <div class="col-flex-justify mb-10">
+                        <strong>Productos</strong>
+                    </div>
+                    <div class="col-flex-justify mb-10">
+                        <span>Producto 1</span>
+                        <span>$ 150</span>
+                    </div>
+                    <div class="col-flex-justify mb-10">
+                        <span>Producto 2</span>
+                        <span>$ 150</span>
+                    </div>
+                    <div class="col-flex-justify mb-10">
+                        <span>Producto 3</span>
+                        <span>$ 150</span>
+                    </div>
+                    <div class="col-flex-justify mb-10 resumen-compra__separador">
                         <strong>Subtotal</strong>
-                        <strong>$ 150</strong>
+                        <strong>$ 450</strong>
                     </div>
                     <div class="col-flex-justify mb-10">
                         <strong>Envio</strong>
@@ -278,16 +251,105 @@
                     </div>
                     <div class="col-flex-justify resumen-compra__separador">
                         <h3>Total</h3>
-                        <h3>$ 160</h3>
+                        <h3>$ 460</h3>
                     </div>
+                </div>
+
+                <div class="categorie-title">
+                    <h3>Métodos de Pago</h4>
+                    <div></div>
+                </div>
+                <div class="resumen-compra">
+                    <form class="col-flex-column">
+                        <div class="custom-radio-button mb-10">
+                            <input type="radio" name="paymethod" id="paypal">
+                            <label for="paypal">Paypal</label>
+                        </div>
+                        <div class="custom-radio-button mb-10">
+                            <input type="radio" name="paymethod" id="tarjetas">
+                            <label for="tarjetas">Tarjetas</label>
+                        </div>
+                        <div class="custom-radio-button mb-10">
+                            <input type="radio" name="paymethod" id="transferencia">
+                            <label for="transferencia">Transferencia</label>
+                        </div>
+                    </form>
                     <div class="button-group">
                         <button class="button-group__pagar">Pagar</button>
                     </div>
                 </div>
             </div>
+            <!-- direccion envio inicio -->
+            <div class="col-8 col-sm-12 mb-15 hidden" id="direccion-envio">
+                <div class="categorie-title">
+                    <h3>Dirección de envio</h3>
+                    <div></div>
+                </div>
+                <div class="factura-direccion bg-light">
+                    <div class="col-flex mb-15">
+                        <div class="factura-direccion__input">
+                            <label for="name">Nombre</label>
+                            <input type="text" name="" id="name" placeholder="Nombre">
+                        </div>
+                        <div class="factura-direccion__input">
+                            <label for="lastname">Apellido</label>
+                            <input type="text" name="" id="lastname" placeholder="Apellido">
+                        </div>
+                    </div>
+                    <div class="col-flex mb-15">
+                        <div class="factura-direccion__input">
+                            <label for="email">E-mail</label>
+                            <input type="text" name="" id="email" placeholder="example@email.com">
+                        </div>
+                        <div class="factura-direccion__input">
+                            <label for="telefono">Telefono</label>
+                            <input type="text" name="" id="telefono" placeholder="+57311.......">
+                        </div>
+                    </div>
+                    <div class="col-flex mb-15">
+                        <div class="factura-direccion__input">
+                            <label for="direccion">Dirección</label>
+                            <input type="text" name="" id="direccion" placeholder="Cra 12 # xxx">
+                        </div>
+                        <div class="factura-direccion__input">
+                            <label for="adicional">Información adicional</label>
+                            <input type="text" name="" id="adicional" placeholder="barrio, bloque, apto ...">
+                        </div>
+                    </div>
+                    <div class="col-flex mb-15">
+                        <div class="factura-direccion__input">
+                            <label for="Pais">Pais</label>
+                            <select name="pais" id="Pais">
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="colombia">Colombia</option>
+                                <option value="francia">Francia</option>
+                                <option value="italia">Italia</option>
+                                <option value="mexico">Mexico</option>
+                                <option value="usa">United States</option>
+                            </select>
+                        </div>
+                        <div class="factura-direccion__input">
+                            <label for="departamento">Departamento/Estado</label>
+                            <input type="text" name="" id="departamento" placeholder="Cundinamarca">
+                        </div>
+                    </div>
+                    <div class="col-flex mb-15">
+                        <div class="factura-direccion__input">
+                            <label for="ciudad">Ciudad</label>
+                            <input type="text" name="" id="ciudad" placeholder="New York">
+                        </div>
+                        <div class="factura-direccion__input">
+                            <label for="codigopostal">Codigo postal</label>
+                            <input type="text" name="" id="codigopostal" placeholder="123">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- direccion envio fin -->
         </div>
     </div>
-    <!-- Carrito de compras fin-->
+    <!-- direccion factura fin -->
     <!-- Footer inicio -->
     <div class="container-element bg-dark">
         <div class="row align-none pt-30 flex-wrap">
@@ -365,6 +427,16 @@
                 console.log('probando')
             }
         }
+
+        let amount = 1;
+        function amountProduct(num){
+            amount += num;
+            if(amount < 0){
+                amount = 0;
+            }
+            document.getElementById('amount-product').innerHTML = amount
+        }
+
     </script>
 </body>
 </html>
