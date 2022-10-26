@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="./css/style.css">
 
     <script src="./js/toggleNavBar.js"></script>
-    <script src="./js/carrusel.js" ></script>
+    <script src="./js/showElement.js"></script>
 </head>
 <body>
     <!-- Top bar inicio -->
@@ -100,7 +100,7 @@
                     <div class="col-flex visible" id="navBarCollapse">
                         <a href="index.html" class="nav-menu">Inicio</a>
                         <a href="shop.html" class="nav-menu">Compras</a>
-                        <a href="" class="nav-menu active">Detalles</a>
+                        <a href="detalles.html" class="nav-menu">Detalles</a>
                         <div class="pages">
                             <a href="#" class="nav-menu">
                                 Páginas
@@ -113,7 +113,7 @@
                                 </div>
                             </div>
                         </div>
-                        <a href="contacto.html" class="nav-menu">Contactos</a>
+                        <a href="contacto.html" class="nav-menu active">Contactos</a>
                     </div>
                     <div class="visible">
                         <a href="" class="btn">
@@ -136,123 +136,52 @@
             <div class="col-12">
                 <div class="nav-route">
                     <a href="index.html">Inicio</a>
-                    <a href="detalles.html">Detalles</a>
-                    <span>Productos</span>
+                    <a href="facturacion.html">Contacto</a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Ruta fin-->
-    <!-- Detalle producto inicio-->
+    <!-- direccion factura inicio -->
     <div class="container-element">
-        <div class="row align-none">
-            <div class="col-4 col-sm-12">
-                <div class="carrusel mb-0">
-                    <div class="carrusel-navBtn">
-                        <span class="Btn selected" onclick="currentSlide(0)"></span>
-                        <span class="Btn" onclick="currentSlide(1)""></span>
-                    </div>
-                    
-                    <div class="carrusel-item hight-auto active">
-                        <img class="not-cover" src="./img/product-2.jpg" alt="moda ropa hombre">
-                    </div>
-                    <div class="carrusel-item hight-auto">
-                        <img class="not-cover" src="./img/product-2-2.jpg" alt="moda ropa hombre">
-                    </div>
-                    <a class="arrow-carrusel" onclick="nextSlide(-1)">❮</a>
-                    <a class="arrow-carrusel right" onclick="nextSlide(1)">❯</a>
+        <div class="row align-none flex-wrap">
+            <div class="col-12">
+                <div class="categorie-title">
+                    <h3>Contactanos</h3>
+                    <div></div>
                 </div>
             </div>
-            <div class="col-8 col-sm-12 bg-light">
-                <h2 class="product-name">Buzos para hombre</h2>
-                <div class="calification">
-                    <small class="fa fa-star"></small>
-                    <small class="fa fa-star"></small>
-                    <small class="fa fa-star"></small>
-                    <small class="fa fa-star"></small>
-                    <small class="fas fa-star-half-alt"></small>
-                    <small>(99 reviews)</small>
-                </div>
-                <h3 class="product-price">$150.00</h3>
-                <p>
-                    Buzo cuello redondo para hombre sin estampado, colores y tallas variadas. Telas ideales para todo tipo de clima.
-                    Confección y telas nacionales.
-                </p>
-                <div class="col-flex">
-                    <strong class="radio-title">talla:</strong>
-                    <form>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="size" id="XS">
-                            <label for="XS">XS</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="size" id="S">
-                            <label for="S">S</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="size" id="M">
-                            <label for="M">M</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="size" id="L">
-                            <label for="L">L</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="size" id="XL">
-                            <label for="XL">XL</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-flex mt-15">
-                    <strong class="radio-title">Color:</strong>
-                    <form>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="color" id="Rojo">
-                            <label for="Rojo">Rojo</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="color" id="Azul">
-                            <label for="Azul">Azul</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="color" id="Blanco">
-                            <label for="Blanco">Blanco</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="color" id="Negro">
-                            <label for="Negro">Negro</label>
-                        </div>
-                        <div class="custom-radio-button">
-                            <input type="radio" name="color" id="Verde">
-                            <label for="Verde">Verde</label>
-                        </div>
-                    </form>
-                </div>
-                <div class="mt-15">
+            <div class="col-7 col-sm-12">
+                <div class="contacto bg-light">
+                    <input type="text" class="contacto__input" placeholder="Tu nombre">
+                    <input type="text" class="contacto__input" placeholder="Tu email">
+                    <input type="text" class="contacto__input" placeholder="Motivo">
+                    <textarea name="mensaje" class="contacto__textarea" placeholder="Mensaje"></textarea>
                     <div class="button-group">
-                        <div class="product-amount">
-                            <button onclick="amountProduct(-1)">-</button>
-                            <span id="amount-product">1</span>
-                            <button onclick="amountProduct(1)">+</button>
-                        </div>
-                        <button class="product-add-cart"><i class="fas fa-shopping-cart"></i> Agregar al Carrito</button>
+                        <button class="enviar">Enviar Mensaje</button>
                     </div>
                 </div>
-                <div class="mt-15">
-                    <div class="row ">
-                        <strong class="mr-2">Compartir: </strong>
-                        <div class="col-flex">
-                            <a class="social social-logo"><i class="fab fa-facebook-f"></i></a>
-                            <a class="social social-logo"><i class="fab fa-twitter"></i></a>
-                            <a class="social social-logo"><i class="fab fa-instagram"></i></a>
-                            <a class="social social-logo"><i class="fab fa-whatsapp"></i></a>
-                        </div>
+            </div>
+            <div class="col-5 col-sm-12">
+                <div class="map bg-light">
+                    <div class="bg-light">
+                        <iframe style="width: 100%; height: 250px;"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+
+                <div class="ubicacion bg-light mt-15">
+                    <div class="ubicacion__address">
+                        <p class="mb-10"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
+                        <p class="mb-10"><i class="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
+                        <p class="mb-10"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Detalle producto fin-->
+    <!-- direccion factura fin -->
     <!-- Footer inicio -->
     <div class="container-element bg-dark">
         <div class="row align-none pt-30 flex-wrap">
